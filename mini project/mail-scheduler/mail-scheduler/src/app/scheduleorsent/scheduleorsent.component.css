@@ -1,0 +1,76 @@
+div>mat-form-field
+{
+    margin-top: 100px;
+}
+
+#tabs 
+{
+    width: 400px;
+    /* margin-top:20px; */
+   margin-left: 15%;
+   margin-top: -98px;
+   position: fixed;
+   border: 0px;
+   
+}
+mat-nav-list
+{
+    width: 15%;
+}
+.form
+{
+    width: 40%;
+    height: 60%;
+    margin-left: 55%;
+    margin-top: -100px; 
+    }
+.Schedule
+{
+    margin-left: 0%
+}
+.newEmail
+{
+    margin-top: -8%;
+    margin-left: 80%;
+}
+.discard
+{
+    margin-left: 10%;
+}
+.to
+{
+    height: 60px;
+    width: 100%;
+}
+.time
+{
+    margin-left: 5%;
+}
+.body
+{
+    width: 100%;
+}
+/* .schedulerData */
+/* { */
+    /* margin-left: 50%; */
+    /* width: 30%;
+    height: 0%;
+    margin-top: 0%;
+    margin-bottom: 50px; */
+/* } */
+.data
+{
+   height: 60px;;
+}
+.date
+{
+    margin-left: 180px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.sctime
+{
+  margin-left: 330px;
+  display: inline-block;
+  margin-bottom: 20px;
+}

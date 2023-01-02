@@ -1,0 +1,38 @@
+<div class="dialogbox">
+
+    <mat-form-field appearance="fill">
+      <mat-label>Account Name</mat-label>
+      <input matInput [(ngModel)]="formData.name">
+    </mat-form-field>
+    <h3>Credentials</h3>
+    <mat-form-field >
+      <mat-label>Email</mat-label>
+      <input matInput [(ngModel)]="formData.email">
+    </mat-form-field>
+    <br>
+    <mat-form-field >
+      <mat-label>password</mat-label>
+      <input matInput [(ngModel)]="formData.password">
+    </mat-form-field>
+    <h3>Incoming Server Details</h3>
+    <mat-form-field >
+      <mat-label>Incoming Server</mat-label>
+      <input matInput [(ngModel)]="formData.icServer">
+    </mat-form-field>
+    <mat-form-field >
+      <mat-label>Incoming Server Port</mat-label>
+      <input matInput [(ngModel)]="formData.icPort">
+    </mat-form-field>
+    <h3>Outgoing Server Details</h3>
+    <mat-form-field >
+      <mat-label>Outgoing Server</mat-label>
+      <input matInput [(ngModel)]="formData.ogServer">
+    </mat-form-field>
+    <mat-form-field >
+      <mat-label>Outgoing Server Port</mat-label>
+      <input matInput [(ngModel)]="formData.ogPort">
+    </mat-form-field>
+    <br>
+    <button  mat-raised-button type="submit" (click)="emailConfigure()">Save</button>
+    <button  class="delete" mat-raised-button type="reset">Delete</button>
+</div>

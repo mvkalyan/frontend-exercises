@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <span>Mail-Scheduler</span>
+   <a  href=#  > <mat-icon title="logout" class="icon">logout</mat-icon></a>
+   <a href="#" class="logout">Logout</a> 
+</mat-toolbar>
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'">
+      <mat-toolbar>Menu</mat-toolbar>
+      <mat-nav-list>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <!-- Add Content Here -->
+      <app-scheduleorsent></app-scheduleorsent>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

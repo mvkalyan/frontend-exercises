@@ -1,0 +1,111 @@
+Demo1:
+
+ts:
+
+  name=new FormControl("demo");
+  updateName(){
+    this.name.setValue("demo");
+  }
+
+Html:
+  Enter Name:
+  <input type="text" [formControl]="name">
+  <button (click)="updateName()">Undo changes</button>
+  <p>Welcome {{name.value}}</p>
+
+
+Demo2:
+
+ts:
+ profileForm=new FormGroup({
+
+    firstname:new FormControl("demo1",[Validators.required,Validators.minLength(4)]),
+    lastname:new FormControl("demo2",[Validators.required,lastNameValidator]),
+    address:new FormGroup({
+      city:new FormControl(''),
+      street:new FormControl(''),
+      state:new FormControl(''),
+      zip:new FormControl('')
+    })
+
+  })
+  get firstName(){
+    return this.profileForm.get('firstname');
+  }
+  get lastName(){
+    return this.profileForm.get('lastname');
+  }
+  getValue(){
+    console.log(this.profileForm.value.address?.city);
+  }
+  defaultValue(){
+    this.profileForm.patchValue({
+      firstname:"gayatri",
+      address:{
+        city:"pune"
+
+      }
+
+    })
+  }
+
+
+Html:
+
+<p>formgroup2 works!</p>
+
+<form [formGroup]="profileForm" (ngSubmit)="getValue()">
+    Enter First Name:
+    <input type="text" formControlName="firstname">
+    
+    <div *ngIf="profileForm.get('firstname')?.touched || profileForm.get('firstname')?.dirty 
+    && profileForm.get('firstname')?.invalid" >
+
+    Please Enter valid first name
+
+    </div>
+    Enter last Name:
+    <input type="text" formControlName="lastname">
+
+    <div *ngIf="profileForm.get('lastname')?.touched || profileForm.get('lastname')?.dirty 
+    && profileForm.get('lastname')?.invalid" >
+
+    Invalid last name
+
+    </div>
+
+    <div formGroupName="address">
+    Enter City:
+    <input type="text" formControlName="city">
+    Enter street:
+    <input type="text" formControlName="street">
+    Enter state:
+    <input type="text" formControlName="state">
+    Enter zip:
+    <input type="text" formControlName="zip">
+    </div>
+
+    <input type="submit">
+    <button (click)="defaultValue()">change to dafulat</button>
+
+</form>
+
+
+customvalidator:
+
+validateLastName.ts:
+
+import { AbstractControl } from "@angular/forms";
+
+export function lastNameValidator(control:AbstractControl){
+
+    //last name can not be start with x
+
+    if(control.value.startsWith('x')){
+        return {invalidateLastName:true};//error object
+    }
+    return null; 
+
+}
+
+

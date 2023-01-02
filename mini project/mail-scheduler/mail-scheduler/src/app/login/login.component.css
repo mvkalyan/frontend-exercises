@@ -1,0 +1,13 @@
+mat-card
+{
+    width: 20%;
+    margin-left: 30%;
+    margin-top: 10%;
+    background-color: rgba(128, 128, 128, 0.671);
+}
+.form-control
+{
+    width: 80%;
+    margin-left: 10%;
+
+}

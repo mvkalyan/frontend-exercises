@@ -1,0 +1,118 @@
+
+
+	Angular 
+
+		HTML - template
+		ts - Model
+
+	One way binding
+		1. Interpolation --- {{}} -- {{variableName}} -- from ts to html
+		2. Property binding -- [] -- u put the attribute of a tag in []-- from ts to html
+		3. event binding -- () -- from html to ts
+		
+	Two way Binding	
+		1. ngModel -- to use ngModel import formsModule in the app.module.ts and add it to the imports array
+		2. To Share parent & child component
+			Parent to the child  -- property binding
+				@Input
+			<app>
+				<child></child>
+			</app>
+
+		in child 
+	
+		item -- the value for this item should come from parent
+
+		@Input()
+		item
+
+
+		in parent
+
+		<child [item]="someVariable"></child>
+
+************************************************************************************
+
+	Sending data from child to parent -- event binding
+
+
+1. in child ts file
+
+	I created a newItem which is an eventEmitter<string> and decorated this with @Output()
+
+		@Output()
+  		newItem=new EventEmitter<string>();
+
+2. in child html
+	I child html I sent a value from child.html to child.ts
+		<input type="text" #data>
+		<button (click)="sendData(data.value)">Send data</button>
+
+	In Child.ts
+
+		I handle the value and emit it
+		
+		sendData(str:string){
+    			console.log(str);
+    			this.newItem.emit(str);
+  		}
+
+3. In parent html
+
+	I will invoke the child component and do event binding in it
+		<app-child2 (newItem)="showData($event)"></app-child2>
+
+4. In parent ts file
+
+	Create a showData function which can consume the value emitted
+	
+		newValue='';
+		showData(str:string)
+		{
+			this.newValue=str;	
+		}
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+

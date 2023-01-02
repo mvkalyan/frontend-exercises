@@ -1,0 +1,37 @@
+.sidenav-container {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+  }
+  
+  .sidenav {
+    width: 200px;
+    position: absolute;
+  }
+  
+  .sidenav .mat-toolbar {
+    background: inherit;
+    
+  }
+  
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  /* .logout
+  {
+    
+  } */
+  .icon
+  {
+    margin-left:1020px;
+    text-decoration: none;
+    color: azure;
+  }
+  .logout
+  {
+    margin-top: -10px;
+    text-decoration: none;
+    color: azure;
+  }

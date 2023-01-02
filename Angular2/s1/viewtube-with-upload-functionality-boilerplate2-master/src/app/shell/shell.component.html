@@ -1,0 +1,99 @@
+<mat-toolbar id="header" color="primary">
+
+  <div id="title-block">
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <a id="home-link" href="/"><h1>ViewTube</h1></a>
+  </div>
+
+   <div>
+
+    <mat-form-field id="search">
+      <mat-label>Search</mat-label>
+      <input matInput type="text" name="searchquery" id="searchquery">
+    </mat-form-field>
+    <button mat-icon-button matTooltip="Search">
+      <mat-icon>search</mat-icon>
+    </button>
+    <button mat-icon-button matTooltip="Audio Search">
+       <mat-icon>mic</mat-icon>
+    </button>
+  </div>
+
+
+  <div>
+    <button mat-icon-button matTooltip="Notifications">
+      <mat-icon>notifications</mat-icon>
+    </button>
+    <button mat-icon-button matTooltip="Create Video">
+      <mat-icon>video_call</mat-icon>
+    </button>
+    <button mat-icon-button matTooltip="Apps">
+      <mat-icon>apps</mat-icon>
+    </button>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu"
+      matTooltip="Manage Profile">
+      <mat-icon>person_outline</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>settings</mat-icon>
+        <span>Settings</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>help</mat-icon>
+        <span>Help</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon>
+        <span>Disable alerts</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>feedback</mat-icon>
+        <span>Send Feedback</span>
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
+<div>
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer  class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'push' : 'side'" [opened]="false">
+      <!-- <mat-toolbar>Menu</mat-toolbar> -->
+      <mat-nav-list>
+        <a mat-list-item href="/">
+          <mat-icon>home</mat-icon> Home
+        </a>
+        <a mat-list-item href="#">
+          <mat-icon>explore</mat-icon>Explore
+        </a>
+        <a mat-list-item href="#">
+          <mat-icon>subscriptions</mat-icon>Subscriptions
+        </a>
+        <a mat-list-item href="#">
+          <mat-icon>video_library</mat-icon>Library
+        </a>
+        <a mat-list-item href="#">
+          <mat-icon>history</mat-icon>History
+        </a>
+        <a mat-list-item id="signin">
+          <label for=""> Sign in to like videos, comment, and subscribe.</label>
+        </a>
+        <a mat-list-item>
+          <button mat-stroked-button id="signin-button" color="primary">
+            <mat-icon>account_circle</mat-icon>SIGN IN
+          </button>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <!-- Add Content Here -->
+      <mat-toolbar>
+        <app-chips-bar></app-chips-bar>
+      </mat-toolbar>
+      
+      <app-video-content></app-video-content>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

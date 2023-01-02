@@ -1,0 +1,15 @@
+{
+  "mail-configurations": [],
+  "emails": [
+    {
+      "to": "kalyan@gmail.com",
+      "cc": "venkatakalyan73@gmail.com",
+      "bcc": "asdasdsaad",
+      "subject": "afafdfdfdf",
+      "body": "Hello Kalyan",
+      "scheduledDate": "2022-10-07",
+      "scheduledTime": "15:50",
+      "id": 1
+    }
+  ]
+}

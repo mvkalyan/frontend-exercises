@@ -1,0 +1,11 @@
+<mat-card app-player matRipple class="card" *ngFor="let video of video$ | async">
+      <a href="#">
+        <img mat-card-image [src]="video.snippet.thumbnails.medium.url">
+      </a>
+      <div id="duration">{{ video.contentDetails.length }}</div>
+      <mat-card-content>
+        <h5>{{ video.snippet.title }}</h5>
+        <p>{{ video.snippet.channelTitle }}</p>
+        <p>{{ video.statistics.viewCount }} views . {{ video.snippet.relativeTime }}</p>
+      </mat-card-content>
+</mat-card>

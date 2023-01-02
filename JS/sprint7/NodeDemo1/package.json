@@ -1,0 +1,17 @@
+{
+  "name": "manali-pack",
+  "version": "1.0.0",
+  "description": "this is a demo package",
+  "main": "script1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "man"
+  ],
+  "author": "Manali",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^5.74.0"
+  }
+}

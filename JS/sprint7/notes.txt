@@ -1,0 +1,87 @@
+
+	Install MinifyAll
+
+	css
+	html
+	js
+
+***************************
+
+	demo1.js
+	index.html -- run	
+		<script src="demo1.js">
+
+*********************
+
+	demo1.js
+		node demo1.js 
+**********************
+
+	Node comes with NPM
+	NPM - node package manager
+		Its a kind of a library
+		You can publish your own packages to it
+		You can also download existing packages from npm registry
+
+******************************
+
+	npm install @angular/cli
+**********************************
+	To create your own package
+	
+
+	Create a folder
+	create some js files in it
+	
+	Execute the following command
+		npm init
+
+		answer the questions
+		
+	now a package.json file will get created for your project
+
+	To install dependecies in your project write npm install _____
+
+	this will add the dependency name to the "dependency" property of package.json
+	and nodemodules folder will have these dependencies
+
+
+
+***************************************************************************
+
+
+	0.1 Create a project
+	0.2 Create some js & Html files
+	0.3 create a file named index.js -- entry point -- in this file we have to list / import all other js files
+
+	0.4 make it is as a package -- npm init
+		
+
+	Bundling Steps:
+	1. Install weback & webpack-cli as dev dependencies
+		npm install --save-dev webpack
+		npm install --save-dev webpack-cli
+
+			OR
+		npm install --save-dev webpack webpack-cli	
+	2. create a file webpack.config.js
+	3. create npm script in package.json
+		scripts:{
+			"build":"webpack --config=webpack.config.js"
+		}
+	4. Run your code
+		npm run build
+
+
+	if you include your bundled file in index.html, it should work
+
+
+*************************************************************
+	1.Next install the following plugins for additional usage
+		 npm install html-webpack-plugin
+		 npm install clean-webpack-plugin
+
+	2. Now go to webpack.config.js
+		add the plugins 
+
+

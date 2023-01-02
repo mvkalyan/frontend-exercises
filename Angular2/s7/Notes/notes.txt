@@ -1,0 +1,10 @@
+it("should check getheros ",()=>{
+    //when you have one service dependent on another service we need to create mock the dependant service(Httpclient)
+  const demoArray: Hero[] = [{ id: 1, name: "abc" }, { id: 2, name: "xyz" }];
+  //create http mock
+    httpspy = jasmine.createSpyObj("HttpClient", ['get']);
+    const ob = new ObsevaleDataService(httpspy as any);
+    ob.getHeros().subscribe(data => {
+    expect(data).toEqual(demoArray);
+  })
+  })

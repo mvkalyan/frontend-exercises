@@ -1,0 +1,149 @@
+
+	ng new project-name
+	1. do u want routing? Yes / no
+	2. CSS
+
+Every component will have the following 4 files:
+html
+css
+ts
+spec.ts
+
+
+Module- can have multiple other components inside it
+module.ts
+
+index.html - entry point of my application
+
+it invokes the app component with the <app-root> selector
+
+******************************
+
+Framework
+
+
+ng build
+
+ng b
+
+ng serve
+
+*******************************************************
+
+Data Binding
+One way binding
+
+	Interpolation -- Data flows from ts to html --{{}}
+	Property Binding -- [] - data is flowing from ts to html
+	Event Binding  -- () -- flow is from html to ts 
+
+
+Property binding can be used in various scenarios whereas the usage of interpolation is limited. Interpolation is a kind of property binding	
+
+Two way binding
+	ngModel - [()]
+
+
+	@input
+
+	@output
+	
+	
+
+
+
+html  ---> ts
+
+ts --> html
+
+
+{{}}  -- Interpolation
+
+{{variable name}}
+
+
+*************************************
+When Working with ngModel please import FormsModule in app.module.ts file and add it to the imports array
+
+
+
+
+**************************************
+
+Parent wants to send data to the child --- @Input in the child
+
+Child wants to send data to the parent --- @Output
+
+*************************************************
+
+app - parent
+
+
+child - childTag
+
+child.component.ts
+@Component({
+  selector: 'child-tag',
+  templateUrl: './child.component.html',
+  styleUrls: ['./child.component.css']
+})
+export class ChildComponent {
+  @Input()
+  item=''; //I want the value for this item should come from parent -- app
+ 
+
+}
+
+
+child.component.html
+
+<p>The value of item is {{item}}</p>
+
+
+*********************************************
+
+app.component.ts
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'communication';
+  value="Laptop";
+}
+
+
+app.component.html
+
+<child-tag [item]="value"></child-tag>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,75 @@
+{
+  "register": [
+    {
+      "email": "kalyan@gmail.com",
+      "password": "1234",
+      "confpassword": "1234",
+      "id": 1
+    },
+    {
+      "email": "manoj@gmail.com",
+      "password": "1234",
+      "confpassword": "1234",
+      "id": 2
+    },
+    {
+      "email": "kalyan@gmail.com",
+      "password": "1234",
+      "confpassword": "1234",
+      "id": 3
+    },
+    {
+      "email": "hasina@gmail.com",
+      "password": "1234",
+      "confpassword": "1234",
+      "id": 4
+    }
+  ],
+  "authenticate": [
+    {
+      "email": "kalyan@gmail.com",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "email": "kalyan@gmail.com",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "email": "kalyan@gmail.com",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "email": "manoj@gmail.com",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "email": "kalyan@gmail.com",
+      "password": "1234",
+      "id": 5
+    },
+    {
+      "email": "kalyan@gmail.com",
+      "password": "1234",
+      "id": 6
+    },
+    {
+      "email": "kalyan@gmail.com",
+      "password": "1234",
+      "id": 7
+    },
+    {
+      "email": "hasina@gmail.com",
+      "password": "12345",
+      "id": 8
+    },
+    {
+      "email": "kalyan@gmail.com",
+      "password": "1234",
+      "id": 9
+    }
+  ]
+}

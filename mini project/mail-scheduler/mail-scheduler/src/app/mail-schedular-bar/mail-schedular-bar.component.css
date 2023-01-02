@@ -1,0 +1,85 @@
+nav{
+    background-color: #f90606;
+    color: whitesmoke;
+    padding: 1.4rem;
+    font-size: 2.4rem;
+    font-family: inherit;
+}
+nav button div{
+    display: flex;
+    align-items: center;
+}
+nav button{
+    position: absolute;
+    right: 2rem;
+    background-color: #f90606;
+    border: none;  
+    color: white;
+}
+
+.mat-tab-group {
+    margin-bottom: 48px;
+}
+
+#email-container{
+    display: flex;
+}
+mat-drawer{
+    background-color: #555;
+   
+}
+
+.addaccountbtn{   
+    border-top: 4px solid red;
+    font-size: 1rem;
+    padding: 1.4rem;
+    border: none;
+    width: 100%;
+}
+form {
+    background-color: aliceblue;
+    border: 6px double black;
+    border-radius:0.7rem ;
+    color: white;
+    width: 30%;
+    margin: 2rem auto;
+    padding: 0.4rem;
+  }
+  form input,select{
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    padding: 0.4rem;
+    margin: 0.4rem;
+  }
+  form textarea{
+    border:2px solid black;
+    border-radius: 0.4rem;
+    margin: 0.4rem;
+  }
+  form button{
+    font-size: 1rem;
+    
+    margin: 1rem 0.4rem;
+    border: 2px solid black;
+    border-radius: 0.7rem;
+    padding: 0.4rem;
+  }
+button:hover {
+    background-color: gray;
+}
+.cardClass{
+    background-color: gray;
+    position: absolute;
+    z-index: 2;
+    top: 8rem;
+    width: 34%;
+    height: 70vh;
+    border: 6px double black;
+    left: 25%;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+h1{
+    color: black;
+    margin-left: 0.4rem;
+}

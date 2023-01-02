@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Feedback Form</h1>
+    </header>
+    <form id="feedbackForm" action="#" onsubmit="return submitFeedback()">
+        <h3>Please fill up your details here to share your experience with us</h3>
+        <h4>Your feedback will help us to serve you better</h4>
+        <div id="validationSummary">
+            <ul>
+
+            </ul>
+        </div>
+        <div>
+            <input name="username" id="username" placeholder="Enter Username">
+            <small id="userNameError"></small>
+        </div>
+        <div>
+            <input name="email" id="email" placeholder="Enter Email">
+            <small id="emailError"></small>
+        </div>
+        <div>
+            <input name="contactNo" id="contactNo" placeholder="Enter Contact No">
+            <small id="contactNoError"></small>
+        </div>
+        <div>
+            <input name="product" id="product" placeholder="Enter Product Purchased">
+            <small id="productError"></small>
+        </div>
+        <div>
+            <textarea name="comments" id="comments" placeholder="Enter Comments in less than 70 characters"></textarea>
+            <small id="commentsError"></small>
+        </div>
+        <div>
+            <label>Enter Purchase Date</label>
+            <input type="date" name="purchaseDate" id="purchaseDate" placeholder="Enter Product Purchase Date">
+            <small id="purchaseDateError"></small>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

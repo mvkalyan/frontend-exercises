@@ -1,0 +1,33 @@
+<html>
+    <body>
+        <div style="background-color:lightblue">
+            <label for="chkAllowSubscriptions">Would you like to subscribe to our mailing list?</label>
+            <input id="chkAllowSubscriptions" type="checkbox">
+        </div>
+        <div id="subsdetblock">
+            <label for="subscritpionDetails">If Yes, select the services you would want to receive mailers on</label>
+            <div>
+                <input id="chkProductLaunch" type="checkbox">
+                <label for="chkProductLaunch">New product launches</label>
+                <input id="chkOutlets" type="checkbox">
+                <label for="chkOutlets">New outlets</label>
+                <input id="chkMonthlyNewsLetters" type="checkbox">
+                <label for="chkMonthlyNewsLetters">Monthly newsletters</label>
+
+                
+                <script>
+                    let chkAllowSubscriptions = document.getElementById('chkAllowSubscriptions');
+                    chkAllowSubscriptions.addEventListener('click', (event) => {
+                    if (chkAllowSubscriptions.checked)
+                    {
+                    document.getElementById('subsdetblock').style.display = "block";
+                    document.getElementById('subsdetblock').style.backgroundColor="pink";
+                    }
+                    else
+                    document.getElementById('subsdetblock').style.display = "none";
+                    })
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

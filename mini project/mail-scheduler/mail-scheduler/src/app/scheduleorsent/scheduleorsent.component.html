@@ -1,0 +1,82 @@
+<!-- <p>scheduleorsent works!</p> -->
+<div class="container">
+    <div>
+        <!-- <button mat-raised-button (click)="openDialog();" clicked>+ Add Account</button> -->
+        <mat-nav-list>
+            <mat-list-item (click)="openDialog();">+Add Account</mat-list-item>
+            <mat-list-item>
+                <mat-icon>account_circle</mat-icon> Accounts
+            </mat-list-item>
+        </mat-nav-list>
+        <div>
+            <mat-tab-group id="tabs">
+                <mat-tab label="Scheduled Emails">
+                    <mat-list>
+                        <a class="schedulerData" *ngFor="let formdata of data">
+                            <mat-card class="data" style="margin-bottom: 10px;">
+
+                                <!-- <p>{{formdata.to}}</p>
+                    <p>{{formdata.cc}}</p>
+                    <p>{{formdata.subject}}</p>
+                    <p  class="date">{{formdata.body}}</p>
+                    <p  class="date">{{formdata.scheduledDate}}</p>
+                    <p>{{formdata.scheduledTime}}</p> -->
+                                <!-- <a href="(click)=formsData"> -->
+                                        <span>{{formdata.to}}</span> <br>
+                                        <span>{{formdata.cc}}</span><br>
+                                        <span>{{formdata.subject}}</span><br>
+                                    <!-- </a> -->  
+                            </mat-card>
+                        </a>
+                    </mat-list>
+                </mat-tab>
+                <mat-tab label="Sent Emails"> </mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
+    <mat-card class="form">
+        <div>
+            <h2 class="Schedule">ScheduleEmail</h2>
+            <h4 class="newEmail">New Email</h4>
+        </div>
+        <mat-form-field appearance="fill" class="to">
+            <mat-label>To</mat-label>
+            <input matInput [(ngModel)]="formsData.to">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="to">
+            <mat-label>CC</mat-label>
+            <input matInput [(ngModel)]="formsData.cc">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="to">
+            <mat-label>Bcc</mat-label>
+            <input matInput [(ngModel)]="formsData.bcc">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="to">
+            <mat-label>Subject</mat-label>
+            <input matInput [(ngModel)]="formsData.subject">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="body">
+            <mat-label>Body</mat-label>
+            <textarea matInput [(ngModel)]="formsData.body"></textarea>
+            <input matInput>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Choose a Date</mat-label>
+            <input type="date" matInput [(ngModel)]="formsData.scheduledDate">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="time">
+            <mat-label>Schedule Time</mat-label>
+            <input type="time" matInput [(ngModel)]="formsData.scheduledTime">
+        </mat-form-field>
+        <br>
+        <button mat-raised-button (click)="scheduler();" type="submit">Schedule Email</button>
+        <button class="discard" (click)="discarder()" mat-raised-button type="reset">Discard Changes</button>
+    </mat-card>
+
+
+</div>

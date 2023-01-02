@@ -1,0 +1,58 @@
+<form ngNativeValidate #myform="ngForm" (ngSubmit)="submitted(myform)">
+  Pristine : {{myform.pristine}}<br><br>
+  Valid :{{myform.valid}}<br><br/>
+  Dirty :{{myform.dirty}}<br><br>
+  Touch : {{myform.touched}}<br><br>
+   <input class="form-control" type="text" placeholder="Enter your Name"  name="name" ngModel required #name="ngModel" appMyvalidator>
+   <small *ngIf="name.touched &&!name.valid">Blank not allowed</small>
+   <input type="submit" [disabled]="!myform.valid">
+  </form>
+5:49
+ts file
+5:49
+username:string="";
+  submitted(ff:NgForm)
+  {
+    alert("Hello"+this.username);
+    console.log(ff);
+    console.log(ff.value.name);
+  }
+5:49
+css
+5:49
+input.ng-touched.ng-invalid
+{
+    border-color: red;
+}
+small
+  {
+    background-color: lightyellow;
+    color: red;
+  }
+
+
+
+******************************************
+providers:[{provide:NG_VALIDATORS,useExisting:AmountValidatorDirective,multi:true}]
+
+*******************************************
+
+import { Directive } from '@angular/core';
+import { AbstractControl,NG_VALIDATORS,Validator,ValidationErrors } from '@angular/forms';
+@Directive({
+  selector: '[appAmountValidator]',
+  providers:[{provide:NG_VALIDATORS,useExisting:AmountValidatorDirective,multi:true}]
+})
+export class AmountValidatorDirective implements Validator {
+  constructor() { }
+  validate(control: AbstractControl): ValidationErrors | null
+  {
+    const amt1 = control.value;
+    if(amt1 >= 500)
+      return null;
+    else
+      return {appAmountValidator:true};
+  }
+}
+
+

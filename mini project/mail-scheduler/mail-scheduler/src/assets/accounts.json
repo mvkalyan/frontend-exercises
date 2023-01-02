@@ -1,0 +1,24 @@
+{
+  "accounts": [
+    {
+      "name": "Office Account",
+      "email": "kalyan@gmail.com",
+      "password": "1234",
+      "icServer": "imap",
+      "icPort": "991",
+      "ogServer": "smtp",
+      "ogPort": "465",
+      "id": 1
+    },
+    {
+      "name": "Personal Account",
+      "email": "kalyan@gmail.com",
+      "password": "1234",
+      "icServer": "imp",
+      "icPort": "922",
+      "ogServer": "smtp",
+      "ogPort": "120",
+      "id": 3
+    }
+  ]
+}
